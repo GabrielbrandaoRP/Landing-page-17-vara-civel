@@ -91,7 +91,10 @@ body{
     padding: 18px 15px;
 
 }
-
+.footerPage h2{
+    font-size: 1.3rem;
+    color: var(--white);
+}
 .contatosFooter{
     display: flex;
     flex-direction: column;
@@ -104,9 +107,7 @@ body{
     flex-direction: column;
     align-items: start;
     gap: 8px;
-    & h2{
-        color: var(--white);
-    }
+    
 }
 
 .addressCtn{
@@ -115,13 +116,8 @@ body{
     align-items: start;
     gap: 8px;
 
-    & h2{
-        color: var(--white);
-    }
-
     & p{
         white-space: nowrap;
-        font-size: 1.2rem;
     }
 }
 .contatosCtn{
@@ -130,17 +126,16 @@ body{
     align-items: start;
     color: var(--white);
     gap: 15px;
-    font-size: 0.8rem;
+
 }
 .emailCtn{
     display: flex;
     align-items: center;
     gap: 20px;
     & i{
-        font-size: 2.8rem;
+        font-size: 2.3rem;
     }
     & p{
-        font-size: 1.2rem;
         color: var(--white);
     }
 }
@@ -154,7 +149,7 @@ body{
    
     & i{
         animation: float 3s ease-in-out infinite;
-        font-size: 2.8rem;
+        font-size: 2.3rem;
         color: var(--whatsapp-icon-color);
 }   
 }
