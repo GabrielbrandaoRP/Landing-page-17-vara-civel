@@ -167,9 +167,11 @@ body{
     justify-content: center;
     gap: 8px;
     & h2{
-        font-size: 1.1rem;
+        font-size: 0.8rem;
     }
-
+    & h4{
+        font-size: 0.8rem;
+    }
     & a{
         color: var(--white);
         text-decoration: none;
@@ -221,3 +223,23 @@ body{
     }
 
 }    
+
+/* Page links uteis */
+
+.mainLinksUteis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    gap: 15px;
+}
+
+.itemUtil{
+    border: 1px solid var(--blue);
+    background: var(--white-contrast);
+    color: var(--black);
+
+    & i{
+        color: var(--black);
+    }
+}
