@@ -3,13 +3,13 @@
 :root{
     --blue: #184e92;
     --blue-header: #134077;
-    --blue-footer: #184f9285;
+    --blue-footer: #134077;
     --white: #fafafa;
     --white-text: #fafafab6;
     --white-contrast: #e9e9e9;
     --black: #000000;
     --black-text: #0000009f;
-
+    --whatsapp-icon-color: #22c55e;
 }
 
 * {
@@ -73,88 +73,11 @@ body{
     justify-content: space-between;  
     word-spacing: 0.3rem;
 }
-/* .accordion{
-    width: 100%;
-    background: var(--blue);
-    border-radius: 8px;
-    padding: 12px;
-    box-shadow:  5px 5px 5px rgba(0, 0, 0, 0.1);
-}
-.accordionHeader{
-    width: 100%;
-    border: none;
-    background: var(--blue);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    font-size: 1.3rem;
-    color: var(--white);
-    cursor: pointer;
-    padding: 5px;
-    cursor: pointer;
 
-    & span{
-        max-width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-}
-
-.accordionBody{
-    color: var(--black);
-    font-size: 1.2rem;
-    opacity: 0;
-    height: 0;
-    transition:  opacity .3s;
-
-    
-}
-.ctnAccordion{
-    display: flex;
-    justify-content: space-between;
-}
-.link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    background: var(--blue-header);
-    color: var(--white-contrast);
-    padding: 10px;
-    border-radius: 8px;
-    height: 50px;
-    width: 60px;
-}
-
-.accordionBody.active{
-    height: 100%;
-    opacity: 1;
-    padding: 5px 0;
-    background-color: var(--white-contrast);
-}
-
-
-.accordion.activeHeaderAccordion{
-    background: var(--white-contrast);
-    color: #000000;
-}
-.accordionHeader.activeHeaderAccordion{
-    background: var(--white-contrast);
-    color: #000000;
-}
-.arrow{
-    transition: transform .2s linear;
-}
-.accordion:has(.active) .arrow{
-    transform: rotate(180deg);
-} */
 
 /* ------- */
 
 .footerPage{
-    height: 10vh;
     width: 100%;
     background-color: var(--blue-footer);
     border-radius: 15px 15px 0 0;
@@ -164,26 +87,137 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 500px;
-    color: var(--black-text);
+    color: var(--white-text);
+    padding: 18px 15px;
+
+}
+
+.contatosFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 25px;
+}
+.infoCtn{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+    & h2{
+        color: var(--white);
+    }
+}
+
+.addressCtn{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+
+    & h2{
+        color: var(--white);
+    }
+
+    & p{
+        white-space: nowrap;
+        font-size: 1.2rem;
+    }
+}
+.contatosCtn{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: var(--white);
+    gap: 15px;
+    font-size: 0.8rem;
+}
+.emailCtn{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    & i{
+        font-size: 2.8rem;
+    }
+    & p{
+        font-size: 1.2rem;
+        color: var(--white);
+    }
+}
+.wppCtn{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white);
+    gap: 20px;
+    font-size: 1.2rem;
+   
+    & i{
+        animation: float 3s ease-in-out infinite;
+        font-size: 2.8rem;
+        color: var(--whatsapp-icon-color);
+}   
+}
+.copyDeveloper{
+    height: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    & h2{
+        font-size: 1.1rem;
+    }
 
     & a{
-        margin-left: 5px;
-        color: var(--black);
+        color: var(--white);
+        text-decoration: none;
     }
 }
 #backBtn{
-    display: none; 
-    position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
-    z-index: 99; 
-    border: none; 
-    outline: none;
-    background-color: #000; 
-    color: white;
-    cursor: pointer; 
-    padding: 15px;
-    border-radius: 10px; 
-    font-size: 1.5rem;
-}
+        display: none; 
+        position: fixed; 
+        bottom: 5px; 
+        right: 20px; 
+        z-index: 99; 
+        border: none; 
+        outline: none;
+        background-color: #000; 
+        color: white;
+        cursor: pointer; 
+        padding: 15px;
+        border-radius: 10px; 
+        font-size: 1.5rem;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+@media (min-width: 800px){
+    .contatosFooter{
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 50px;
+      padding: 0 30px;
+      
+    }
+    .copyDeveloper{
+        flex-direction: row;
+    }
+
+    .itemGrid{
+        padding-left: 50px;
+        font-size: 1.4rem;
+    }
+
+}    
