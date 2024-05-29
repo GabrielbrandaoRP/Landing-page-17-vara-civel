@@ -179,6 +179,7 @@ body{
         text-decoration: none;
     }
 }
+
 #backBtn{
         display: none; 
         position: fixed; 
@@ -218,7 +219,7 @@ body{
     .copyDeveloper{
         flex-direction: row;
     }
-
+    
     .itemGrid{
         padding-left: 50px;
         font-size: 1.4rem;
